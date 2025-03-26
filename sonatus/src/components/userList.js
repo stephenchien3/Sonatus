@@ -30,7 +30,7 @@ function UserList() {
 	const handleUserClick = (user) => {
 		setSelectedUser(user);
 	};
-
+	//Loading and error handling
 	if (loading) {
 		return (
 			<div className="flex justify-center items-center h-screen">
@@ -43,6 +43,10 @@ function UserList() {
 		return <div className="text-red-500 text-center p-4">{error}</div>;
 	}
 
+	// The UserList component renders a list of users in a table format
+	// The users are fetched from the useUsers hook
+	// The users can be sorted by name or email
+	// When a user is clicked, the UserDetails component is displayed
 	return (
 		<div className="container mx-auto p-4">
 			<Card className="mb-4">
